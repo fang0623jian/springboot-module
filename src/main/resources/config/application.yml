@@ -1,0 +1,40 @@
+spring:
+  # MyBatis (MyBatisProperties)
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+  # Redis (RedisProperties)
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    timeout: 0
+    password:
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+
+mybatis:
+  type-aliases-package: com.example.module.domain
+  config-locations: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+# mapper
+mapper:
+    mappers:
+        - com.example.module.plugin.BaseMapper
+    not-empty: false
+    identity: MYSQL
+# pagehelper
+pagehelper:
+    helper-dialect: mysql
+    reasonable: true
+    support-methods-arguments: true
+    params: count=countSql
+banner:
+    charset: UTF-8
