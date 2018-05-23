@@ -2,6 +2,8 @@ package com.example.module.controller;
 
 import com.example.module.domain.User;
 import com.example.module.service.UserService;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +24,8 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("insert")
+    @ApiOperation(value="插入用户", notes="根据用户信息插入数据库")
+    @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Integer", paramType = "path")
     public void insertUser(@RequestBody User userEntity) {
         userService.insertUser(userEntity);
     }
