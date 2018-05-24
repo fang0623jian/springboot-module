@@ -52,7 +52,7 @@
         </javaClientGenerator>
 
         <!-- 生成所有表，如果指定生成某个表，就替换下面的% -->
-        <table tableName="product" domainObjectName="Product">
+        <table tableName="user" domainObjectName="User">
             <generatedKey column="id" sqlStatement="mysql" identity="true"/>
         </table>
     </context>
