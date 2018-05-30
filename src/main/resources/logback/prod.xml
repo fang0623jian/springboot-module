@@ -1,15 +1,10 @@
 <included>
     <logger name="org.springframework" level="WARN"/>
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level - [%file:%line] -> %msg%n</pattern>
-        </encoder>
-    </appender>
     <appender name="INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/data/log/holoera-routing/log/info.log</file>
+        <file>data/log/springboot-example/info.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/data/log/holoera-routing/log/info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>data/log/springboot-example/info.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
 
@@ -24,10 +19,10 @@
         </filter>
     </appender>
     <appender name="WARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/data/log/holoera-routing/log/warn.log</file>
+        <file>data/log/springboot-example/warn.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/data/log/holoera-routing/log/warn.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>data/log/springboot-example/warn.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
 
@@ -42,10 +37,10 @@
         </filter>
     </appender>
     <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/data/log/holoera-routing/log/error.log</file>
+        <file>data/log/springboot-example/error.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/data/log/holoera-routing/log/error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>data/log/springboot-example/error.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
 
@@ -60,10 +55,10 @@
         </filter>
     </appender>
     <appender name="DEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/data/log/holoera-routing/log/debug.log</file>
+        <file>data/log/springboot-example/debug.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/data/log/holoera-routing/log/debug.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>data/log/springboot-example/debug.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
 

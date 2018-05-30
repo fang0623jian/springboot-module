@@ -6,10 +6,6 @@
         debug:当此属性设置为true时，将打印出logback内部日志信息，实时查看logback运行状态。默认值为false。
 -->
 <configuration  scan="true" scanPeriod="60 seconds" debug="false">
-    <logger name="org.apache" level="WARN"/>
-    <logger name="org.springframework" level="WARN"/>
-    <logger name="org.mybatis" level="WARN"/>
-    <logger name="org.apache.ibatis" level="WARN"/>
     <!--
         属性一：设置上下文名称<contextName>
             每个logger都关联到logger上下文，默认上下文名称为“default”。但可以使用<contextName>设置成其他名字，
@@ -92,11 +88,11 @@
 
     <!-- 测试环境+开发环境. 多个使用逗号隔开. -->
     <springProfile name="test,dev">
-        <include resource="logback/dev.xml"/>
+        <include resource="src/main/resources/logback/dev.xml"/>
     </springProfile>
     <!-- 生产环境. -->
     <springProfile name="prod,default">
-        <include resource="logback/prod.xml"/>
+        <include resource="src/main/resources/logback/prod.xml"/>
     </springProfile>
 
 </configuration>
