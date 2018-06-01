@@ -19,7 +19,7 @@ spring:
       max-idle: 8
       min-idle: 0
 
-  # kafka
+  # kafka (KafkaProperties)
 #  kafka:
 #    # kafka服务器地址(可以多个英文逗号隔开)
 #    bootstrap-servers: 192.168.255.129:9092,192.168.255.130:9092,192.168.255.131:9092
@@ -44,6 +44,12 @@ spring:
 #      # key/value的序列化
 #      key-serializer: org.apache.kafka.common.serialization.StringSerializer
 #      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+    # elasticsearch (ElasticsearchProperties)
+    data:
+      elasticsearch:
+        cluster-name: xmp-cluster
+        cluster-nodes: localhost:9200
 
 mybatis:
   type-aliases-package: com.example.module.domain
