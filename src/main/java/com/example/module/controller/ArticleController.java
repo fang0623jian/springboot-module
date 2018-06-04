@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("article")
 @Slf4j
-public class Article2ESController {
+public class ArticleController {
 
     @Autowired
     private ArticleService articleService;
