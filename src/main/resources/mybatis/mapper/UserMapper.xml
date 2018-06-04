@@ -8,7 +8,7 @@
         <id column="id" jdbcType="BIGINT" property="id" />
         <result column="userName" jdbcType="VARCHAR" property="userName" />
         <result column="passWord" jdbcType="VARCHAR" property="passWord" />
-        <result column="user_sex" javaType="com.example.module.enums.UserSexEnum" property="userSex" />
+        <result column="user_sex" javaType="com.example.module.domain.enums.UserSexEnum" property="userSex" />
         <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
     </resultMap>
 </mapper>

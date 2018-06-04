@@ -1,4 +1,4 @@
-package com.example.module.enums;
+package com.example.module.domain.enums;
 
 public enum UserSexEnum {
 	MAN, WOMAN

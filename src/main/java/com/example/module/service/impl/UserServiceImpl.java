@@ -22,4 +22,9 @@ public class UserServiceImpl implements UserService{
     public void insertUser(User userEntity) {
         userMapper.insert(userEntity);
     }
+
+    @Override
+    public User queryUserById(Long id) {
+        return userMapper.selectByPrimaryKey(id);
+    }
 }

@@ -19,7 +19,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(indexName = "xmp", type = "news")
+@Document(indexName = "xmp", type = "article")
 public class Article {
     @Id
     private Long id;

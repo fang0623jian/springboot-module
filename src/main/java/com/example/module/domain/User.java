@@ -1,35 +1,44 @@
 package com.example.module.domain;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 
+@ApiModel(value="user对象",description="用户对象user")
 public class User implements Serializable {
     /**
      * 主键id
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(value="用户id",name="id",example="1")
     private Long id;
 
     /**
      * 用户名
      */
     @Column(name = "userName")
+    @ApiModelProperty(value = "用户名", name = "username", example = "fangjian")
     private String username;
 
     /**
      * 密码
      */
     @Column(name = "passWord")
+    @ApiModelProperty(value = "用户密码",name = "password",example = "123456")
     private String password;
 
     @Column(name = "user_sex")
+    @ApiModelProperty(value = "用户性别",name = "userSex",example = "0（女）或者1（男）")
     private String userSex;
 
     @Column(name = "nick_name")
+    @ApiModelProperty(value = "昵称",name = "nickName",example = "fj")
     private String nickName;
 
     private static final long serialVersionUID = 1L;
