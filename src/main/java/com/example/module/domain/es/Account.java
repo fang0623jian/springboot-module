@@ -28,7 +28,7 @@ public class Account implements Serializable {
     @Id
     @ApiModelProperty(value="账户id",name="id",example="1")
     private Long id;
-    @ApiModelProperty(value="账户",name="accountNumber",example="13641457646")
+    @ApiModelProperty(value="账户",name="accountNumber",example="1364145")
     private Integer accountNumber;
     @ApiModelProperty(value="姓氏",name="firstname",example="方")
     private String firstname;
